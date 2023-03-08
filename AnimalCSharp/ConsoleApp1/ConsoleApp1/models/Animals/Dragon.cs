@@ -5,14 +5,14 @@ public class Dragon : Animal, IPilotage // classe dérivée de Animal
 {
     public Dragon()
     {
-        this.Name = "Dragon";
-        this.Type = "legendary";
+
     }
 
-    public Dragon(string name, string type) 
+    public Dragon(string name, string type, int id) 
     {
         this.Name = name;
         this.Type = Type;
+        this.Id = id;
     }
 
 

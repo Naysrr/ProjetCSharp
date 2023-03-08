@@ -4,11 +4,12 @@ using System.Security.Cryptography.X509Certificates;
 
 public class Dog : Animal
 {
-	public string Name { get; set; }
 
-	public Dog(string name)
+	public Dog(string name, string type, int id)
 	{
 		this.Name = name;
+        this.Type = type;
+        this.Id = id;
 	}
 
     public override void Move()

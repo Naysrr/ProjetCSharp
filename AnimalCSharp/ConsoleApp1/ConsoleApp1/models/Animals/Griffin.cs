@@ -7,12 +7,14 @@ public class Griffin : Animal, IPilotage // classe dérivée de Animal
     {
         this.Name = "Griffin";
         this.Type = "Rare";
+        this.Id = 2;
     }
 
-    public Griffin(string name, string type) 
+    public Griffin(string name, string type, int id) 
     {
         this.Name=name;
         this.Type=type;
+        this.Id = id;
     }
 
     public override void Move()
