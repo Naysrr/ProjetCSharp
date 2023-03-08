@@ -3,9 +3,9 @@ using System.Net;
 using System.Xml.Linq;
 using System;
 
-public abstract class Animal //ne peut pas être instancié directement
+public abstract class Animal : IPilotage //ne peut pas être instancié directement
 {
-    public string Name { get; set; }
+    public string Name { get;  set; }
 
     public Animal()
     {
@@ -25,15 +25,16 @@ public abstract class Animal //ne peut pas être instancié directement
     }
 }
 
-public class Griffin : Animal // classe dérivée de Animal
+public class Griffin : Animal, IPilotage // classe dérivée de Animal
 {
-    public Griffin() : base()
+    public Griffin()
     {
         this.Name = "Griffin";
     }
 
-    public Griffin(string name) : base(name)
+    public Griffin(string name) 
     {
+        this.Name=name;
     }
 
     public override void Move()
@@ -42,16 +43,18 @@ public class Griffin : Animal // classe dérivée de Animal
     }
 }
 
-public class Dragon : Animal // classe dérivée de Animal
+public class Dragon : Animal, IPilotage // classe dérivée de Animal
 {
-    public Dragon() : base()
+    public Dragon()
     {
         this.Name = "Dragon";
     }
 
-    public Dragon(string name) : base(name)
+    public Dragon(string name) 
     {
+        this.Name = name;
     }
+
 
     public override void Move()
     {
