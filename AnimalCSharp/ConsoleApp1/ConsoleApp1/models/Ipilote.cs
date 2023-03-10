@@ -4,6 +4,5 @@ namespace AnimalCSharp.ConsoleApp1.ConsoleApp1.Models;
 
 interface IPilotage
 {
-     void Move();
-
+    void Move();
 }
